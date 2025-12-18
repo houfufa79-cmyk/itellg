@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Download Book — Single Page</title>
+    <style>
+      :root{--bg:#f5f7fb;--card:#fff;--accent:#2563eb;--muted:#6b7280}
+      body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);margin:0;padding:32px;display:flex;align-items:center;justify-content:center;min-height:100vh}
+      .card{background:var(--card);border-radius:12px;box-shadow:0 6px 24px rgba(16,24,40,.08);max-width:900px;width:100%;display:flex;gap:28px;overflow:hidden}
+      .cover{width:320px;height:480px;background:linear-gradient(180deg,#e2e8f0,#c7d2fe);display:flex;align-items:center;justify-content:center;color:#334155;font-weight:700;font-size:20px}
+      .meta{padding:28px;flex:1}
+      h1{margin:0 0 8px;font-size:24px}
+      .author{color:var(--muted);margin:0 0 18px}
+      p{color:#374151;line-height:1.45}
+      .actions{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap}
+      .btn{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;color:#fff;background:var(--accent);font-weight:600}
+      .btn.outline{background:transparent;color:var(--accent);border:1px solid rgba(37,99,235,.12)}
+      .note{margin-top:14px;color:var(--muted);font-size:14px}
+      footer{margin-top:18px;color:var(--muted);font-size:13px}
+      @media (max-width:780px){.card{flex-direction:column;align-items:center}.cover{width:60%;height:auto;padding:48px 0}}
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="cover">BOOK COVER</div>
+      <div class="meta">
+        <h1>Example Book Title</h1>
+        <div class="author">By Jane Doe • Fiction • 2025</div>
+        <p>
+          This single-page demo provides a clean place for visitors to
+          download your book. Add your `book.pdf` file to the same folder as
+          this page and the Download button will prompt the file to be saved.
+        </p>
+
+        <div class="actions">
+          <a class="btn" href="book.pdf" download>Download PDF</a>
+          <a class="btn outline" href="book.pdf" target="_blank" rel="noopener">Open in new tab</a>
+        </div>
+     <div class="actions">
+          <a class="btn" href="book.docx" download>Download word</a>
+          <a class="btn outline" href="book.pdf" target="_blank" rel="noopener">Open in new tab</a>
+        </div>
+        <div class="note">Tip: If you want a different filename to be suggested, change the `href` value and the `download` attribute accordingly.</div>
+
+        <footer>
+          If `book.pdf` is missing, place your PDF in the same folder and
+          refresh the page. You can also replace the cover placeholder with
+          an actual image: &lt;img src="cover.jpg" alt="cover"&gt;
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
